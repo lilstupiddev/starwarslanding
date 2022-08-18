@@ -1,0 +1,331 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+body{
+    background: #070506 url(../img/main-bg.png) no-repeat;
+    background-attachment: fixed;
+    background-size: 1100px;
+    background-position: right 4px top;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    max-width: 1060px;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5em;
+} 
+   
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+   
+body::-webkit-scrollbar-thumb {
+  background-color: #FB641A;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    margin-bottom: 80px;
+}
+
+.logo{
+    margin-right: 60px;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.hero-subtitle{
+    font-size: 55px;
+    line-height: 100%;
+    font-family: "MasonChronicles", sans-serif;
+    font-weight: bold;
+}
+
+.hero-title{    
+    font-size: 80px;
+    line-height: 78px;
+    margin-top: 5px;
+    line-height: 110%;
+    font-family: "MasonChronicles", sans-serif;
+    font-weight: bold 900;
+    margin-bottom: 25px;
+}
+
+@font-face {
+    font-family: 'Mason';
+    src: url('Mason.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'MasonChronicles';
+    src: url('MasonChronicles.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+	font-family: 'MasonChronicles';
+	src: url('../fonts/masonchronicles.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/masonchronicles.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/masonchronicles.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/masonchronicles.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/masonchronicles.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/masonchronicles.svg#masonchronicles') format('svg'); /* Chrome < 4, Legacy iOS */
+}  
+
+.hero-text{
+    font-size: 18px;
+    line-height: 150%;
+    max-width: 550px;
+    font-style: normal;
+    font-weight: normal;
+    color: #AFAFAF;
+}
+
+.hero-premier{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    color: #B02000;
+    display: block;
+    margin-bottom: 7px;
+}
+
+.hero-date{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 150%;
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 40px;
+}
+
+.button-play{
+    border: none;
+    background: linear-gradient(90deg, #FB641A 0%, #FC3309 100%);
+    border-radius: 300px;
+    color: #fff;
+    padding: 25px 35px;
+    font-size: 14px;
+    line-height: 16px;
+    position: relative;
+    padding-right: 80px;
+    outline: none;
+    cursor: pointer;
+}
+
+.button-play::after{
+    content: "";
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: #fff;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    background-image: url(../img/Polygon\ 1.svg);
+    background-repeat: no-repeat;
+    background-position: center top 13.5px;
+}
+
+.button-play:before{
+    content: "";
+    width: 81px;
+    height: 81px;
+    background-color: white;
+    opacity: .3;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    right: -8px;
+    top: -8px;
+}
+
+.slider{
+    display: flex;
+    flex-wrap: wrap;
+    outline: none;
+}
+
+.slider-item{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+    box-shadow: 0px 10px 26px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.slider-item:hover{
+    background: linear-gradient(0deg, rgba(64, 101, 255, 0.8), rgba(64, 101, 255, 0.8));
+}
+
+.slider  img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -2;
+}
+
+
+.slider-item:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background:  #373330;
+    opacity: .4;
+    display: block;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.episodes{
+    margin-top: 60px;
+}
+
+
+.slider_nav_left{
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent url(../img/left-arrow.svg) no-repeat center;
+    margin-right: 10px;
+    vertical-align: center;
+    cursor: pointer;
+    outline: none;
+}
+
+.slider_nav_right{
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent url(../img/right-arrow.svg) no-repeat center;
+    cursor: pointer;
+    outline: none;
+}
+
+.slider_nav_left span, .slider_nav_right span{
+    display: none;
+    vertical-align: center;
+}
+
+
+.loader-container{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    background:black;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: padding-box;
+    z-index: 100;
+}
+
+.loader{
+    width: 120px;
+    height: 120px;
+    border: 11px solid;
+    color: #3498db;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: loader 3s linear infinite;
+}
+
+@keyframes loader{
+    25%{
+        color: #2ecc71;
+    }
+    50%{
+        color: #f1c40f;
+    }
+    75%{
+        color: #e74c3c;
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+@media(min-width: 900px) {
+    .container{
+        margin-left: 5%;
+    }
+}
+
+
+
+@media (max-width: 900px){
+    .hero-title{
+        font-size:  36px;
+        line-height: 120%;
+    }
+    .hero-subtitle{
+        font-size: 26px;
+    }
+    .hero-text{
+        font-size: 18px;
+    }
+    .header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logo{
+        margin-bottom: 30px;
+        margin: auto;
+        margin-bottom: 20px;
+        width: 150px;
+        height: auto;
+    }
+    .nav{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    .nav-link{
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 22px;
+    }
+}
+
+
+@media (max-width:800px){
+body{
+    background: black;
+}
+}
